@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative');
+
+html, body, .root {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+}
+body, .app {
+  background: #A6A6BC;
+  color: #190036;
+}
+
+/* main page */
+
+.list-books-title {
+  padding: 10px 0;
+  background: #190036;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.list-books-title h1 {
+  font-weight: 400;
+  margin: 1%;
+  color: #A6A6BC;
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+.list-books-content {
+  padding: 0 0 80px;
+  flex: 1;
+}
+
+.bookshelf {
+  background-image: linear-gradient(to bottom, #190036, #2b1d4b, #3f3760, #565275, #6e6e89);
+  border-top: 18px solid #A6A6BC;
+  border-left: 36px solid #A6A6BC;
+  border-right: 36px solid #A6A6BC;
+  margin: 0;
+  padding: 0;
+}
+
+.bookshelf-title {
+  background: #A6A6BC;
+  border-bottom: 3px solid #8383AA;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-family: 'Cinzel Decorative', cursive;
+}
+.bookshelf-books {
+  text-align: center;
+  padding: 18px;
+}
+
+.open-search {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+}
+.open-search a,
+.info-search,
+.close-info-search {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #00B1CC;
+  background-image: url('./icons/add.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 28px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  font-size: 0;
+}
+
+.info-search {
+  background-image: url('./icons/info.svg') !important;
+  width: 40px !important;
+  height: 40px !important;
+  position: fixed;
+  right: 25px;
+  top: 5px;
+  cursor: pointer;
+  border: 0;
+}
+
+/* modal with information style */
+.info-search-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(131,131,170,0.3);
+  padding: 50px;
+}
+
+.info-search-modal {
+  background-color: white;
+  border-radius: 5px;
+  max-width: 500px;
+  min-height: 300px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.close-info-search {
+  position: relative;
+  top: -420px;
+  left: 435px;
+  cursor: pointer;
+  border: 0;
+  transform: rotate(45deg);
+}
+
+.close-info-search:focus,
+.info-search:focus,
+.open-search a:focus {
+  outline: 0;
+  border: 2px solid white;
+}
+/* search page */
+.search-books-bar {
+  z-index: 15;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 0 6px rgba(0,0,0,0.23);
+}
+.search-books-input-wrapper {
+  flex: 1;
+  background: #e9e;
+}
+.search-books-bar input {
+  width: 100%;
+  padding: 15px 10px;
+  font-size: 1.25em;
+  border: none;
+  outline: none;
+}
+
+.close-search {
+  display: block;
+  top: 20px;
+  left: 15px;
+  width: 50px;
+  height: 53px;
+  background: white;
+  background-image: url('./icons/arrow-back.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 28px;
+  font-size: 0;
+}
+
+.search-books-results {
+  padding: 80px 10px 20px;
+}
+
+/* books grid */
+
+.books-grid {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.books-grid li {
+  padding: 10px 15px;
+  text-align: left;
+}
+
+.book {
+  width: 140px;
+  display: flex;
+  flex-flow: column;
+}
+.shelf-label {
+  position: absolute;
+  z-index: 10;
+  margin-left: 44px;
+}
+.book-title,
+.book-authors {
+  font-size: 0.8em;
+}
+.book-title {
+  margin-top: 10px;
+  color: #f6f6f6;
+}
+.book-authors {
+  color: #FFEDD6;
+}
+
+.book-top {
+  position: relative;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.book-shelf-changer {
+  position: absolute;
+  right: 0;
+  bottom: -10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #FFBF00;
+  background-image: url('./icons/arrow-drop-down.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.book-shelf-changer select {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.book-shelf-changer option {
+  background: #FFEDD6;
+  font-size: 15px;
+}
+
+/* book cover */
+
+.book-cover {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  background: #eee;
+  width: 128px;
+  height: 193px;
+}
+.book-cover-title {
+  padding: 20px 10px 0;
+  text-align: center;
+  font-size: 0.8em;
+}
