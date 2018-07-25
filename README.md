@@ -36,6 +36,7 @@ You would need Node.js in order to view the project.
 * start the development server with `npm start`
 
 ## App preview
+[Online demo](https://myowlreads.herokuapp.com/)
 ![OWL reads app preview](https://image.ibb.co/eqsHz8/localhost_3000_search.png)
 
 ## Acknowledgments
