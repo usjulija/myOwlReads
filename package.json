@@ -7,7 +7,9 @@
     "node": "10.1.0"
   },
   "dependencies": {
-    "eslint": "^6.0.0",
+    "base": "^3.0.0",
+    "eslint": "^6.2.2",
+    "eslint-utils": "^1.4.2",
     "extend": "^3.0.2",
     "handlebars": "^4.1.2",
     "js-yaml": "^3.13.1",
@@ -15,13 +17,16 @@
     "lodash.template": "^4.5.0",
     "mem": "^5.1.1",
     "merge": "^1.2.1",
+    "mixin-deep": "^2.0.1",
     "prop-types": "^15.6.1",
-    "react": "^16.3.2",
+    "react": "^16.9.0",
     "react-dev-utils": "^7.0.1",
-    "react-dom": "^16.3.2",
+    "react-dom": "^16.9.0",
     "react-router-dom": "^4.3.1",
+    "set": "^1.1.1",
     "url-parse": "^1.4.4",
-    "webpack-dev-server": "^3.1.14"
+    "value": "^0.3.3",
+    "webpack-dev-server": "^3.8.0"
   },
   "devDependencies": {
     "react-scripts": "1.1.4"
